@@ -54,6 +54,7 @@ namespace BarcodeViewer
 
         public async void saveButton_Click(object sender, EventArgs e)
         {
+            File.Delete(@"C:\Users\admin\Documents\testUPC.png");
             string barcode = textBox1.Text;
             using var httpClient = new HttpClient();
             string myStringResource;
@@ -77,5 +78,8 @@ namespace BarcodeViewer
                 MessageBox.Show("File has been saved in MyDocuments Folder - testUPC.png");
             }
         }
+      
     }
+  
 }
+
